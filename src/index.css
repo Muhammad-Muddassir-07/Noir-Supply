@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-italiana: "Italiana", serif;
+
+  --color-bg: #09090b;
+  --color-surface: #121214;
+  --color-surface-elevated: #1a1a1e;
+  --color-border: #232328;
+  --color-text: #FFFFFF;
+  --color-text-muted: #9E9E9E;
+  --color-gold: #C9A962;
+  --color-gold-light: #E6CA85;
+  --color-accent: #E0E0E0;
+}
+
+@layer base {
+  * {
+    border-color: #232328;
+  }
+}
+
+body {
+  background-color: #08080a;
+  color: #FFFFFF;
+  font-family: var(--font-jakarta);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Custom editorial styling */
+.font-editorial-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-editorial-heading {
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.font-editorial-italiana {
+  font-family: "Italiana", serif;
+}
+
+/* Subtle architectural hairline borders */
+.hairline-border {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.hairline-border-light {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A962;
+}
